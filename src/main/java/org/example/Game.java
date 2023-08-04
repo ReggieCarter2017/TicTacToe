@@ -183,9 +183,9 @@ public class Game {
 
     public void codeSave(int[] arr) throws IOException {
         FileOutputStream fos = new FileOutputStream("save.out");
-        for (int b = 0; b < 3; b++) { // write to 3 bytes
+        for (int b = 0; b < 3; b++) {
         byte wr = 0;
-        for (int v = 0; v < 3; v++) { // write by 3 values in each
+        for (int v = 0; v < 3; v++) {
             wr += (byte) (arr[3 * b + v] << (v * 2));
             }
             try {
@@ -205,7 +205,7 @@ public class Game {
         int b;
         int i = 0;
         while ((b = fis.read()) != -1) {
-        for (int v = 0; v < 3; ++v) { // 3 values of four possible
+        for (int v = 0; v < 3; ++v) {
             arr[i++] = b >> (v * 2) & 0x3;
             }
         }
